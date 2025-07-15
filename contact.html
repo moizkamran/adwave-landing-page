@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adwave Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Header (copied from index.html) -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-white backdrop-blur-sm">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="index.html">
+          <img src="images/icon-color.png" alt="Adwave Logo" class="h-8 w-auto">
+        </a>
+      </div>
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+        <div class="flex items-center space-x-1">
+          <a href="#" class="hover:text-gray-900">Product</a>
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+        <div class="flex items-center space-x-1">
+          <a href="#" class="hover:text-gray-900">Resources</a>
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+        <a href="#" class="hover:text-gray-900">Pricing</a>
+      </nav>
+      <!-- Auth Buttons -->
+      <div class="flex items-center space-x-4">
+        <button class="text-gray-700 hover:text-gray-900 text-sm font-medium">Sign up</button>
+        <button class="bg-gradient-to-r from-teal-400 to-lime-400 hover:from-teal-500 hover:to-lime-500 text-gray-800 px-8 py-3 rounded-full text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-xl">Log in</button>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <main class="pt-32 bg-white min-h-screen">
+      <div class="max-w-7xl mx-auto px-6">
+
+
+        <!-- Contact Form -->
+       <section class="px-6 py-16 bg-white">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <!-- Left Column -->
+            <div>
+              <h1 class="text-5xl font-extrabold text-gray-900 mb-6" style="font-family:inherit;">Contact us</h1>
+              <p class="text-xl text-gray-800 mb-6">Whether you have questions about our platform, need assistance with your ad campaigns, or simply want to learn more, our team is ready to assist. Reach out to us through the form below, schedule a call, or request a demo—we’d love to hear from you!</p>
+              <p class="text-xl text-gray-800">For additional assistance, you can check out our FAQ as well as our other resources.</p>
+            </div>
+            <!-- Right Column -->
+            <form class="space-y-6">
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-2xl font-bold text-gray-900 mb-2" for="firstName">First name</label>
+                  <input id="firstName" name="firstName" type="text" placeholder="Enter first name" class="w-full px-4 py-2 border-2 border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-2xl font-bold text-gray-900 mb-2" for="lastName">Last name</label>
+                  <input id="lastName" name="lastName" type="text" placeholder="Enter last name" class="w-full px-4 py-2 border-2 border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-2xl font-bold text-gray-900 mb-2" for="position">Position</label>
+                  <input id="position" name="position" type="text" placeholder="Enter position" class="w-full px-4 py-2 border-2 border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-2xl font-bold text-gray-900 mb-2" for="company">Company</label>
+                  <input id="company" name="company" type="text" placeholder="Enter company" class="w-full px-4 py-2 border-2 border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-2xl font-bold text-gray-900 mb-2" for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="Enter email address" class="w-full px-4 py-2 border-2 border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+              </div>
+              <div>
+                <label class="block text-2xl font-bold text-gray-900 mb-2" for="website">Website URL</label>
+                <input id="website" name="website" type="text" placeholder="Enter website URL" class="w-full px-4 py-2 border-2 border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+              </div>
+              <div>
+                <label class="block text-2xl font-bold text-gray-900 mb-2" for="message">What do you want to talk about?</label>
+                <textarea id="message" name="message" rows="3" placeholder="Type your message…" class="w-full px-4 py-4 border-2 border-gray-800 rounded-2xl text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors resize-none"></textarea>
+              </div>
+              <div class="flex justify-end">
+                <button type="submit" class="px-8 py-2 rounded-full text-lg font-bold text-gray-900 bg-gradient-to-r from-lime-300 to-teal-300 hover:from-lime-400 hover:to-teal-400 transition-all shadow-md">Send</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+         <!-- FAQs -->
+    <section class="px-6 py-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-4 gap-12">
+          <!-- Left Column -->
+          <div class="lg:col-span-1">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <div class="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
+              <span class="text-lg font-medium">All FAQs</span>
+              <div class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="lg:col-span-3 space-y-4">
+            <div class="bg-white border-4 border-gray-900 rounded-full px-8 py-6 hover:shadow-md transition-shadow cursor-pointer">
+              <p class="text-lg font-semibold text-gray-900">How does Adwave work?</p>
+            </div>
+            <div class="bg-white border-4 border-gray-900 rounded-full px-8 py-6 hover:shadow-md transition-shadow cursor-pointer">
+              <p class="text-lg font-semibold text-gray-900">What does it cost to run an ad on TV?</p>
+            </div>
+            <div class="bg-white border-4 border-gray-900 rounded-full px-8 py-6 hover:shadow-md transition-shadow cursor-pointer">
+              <p class="text-lg font-semibold text-gray-900">Where do my ads run?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="px-6 py-16 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-4 gap-12">
+          <!-- Left Column -->
+          <div class="lg:col-span-1">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Resources</h2>
+            <div class="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
+              <span class="text-lg font-medium">All Resources</span>
+              <div class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="lg:col-span-3 grid md:grid-cols-3 gap-6">
+            <!-- Insights Card -->
+            <div class="bg-white border-4 border-gray-900 rounded-3xl p-8 hover:shadow-lg transition-shadow cursor-pointer">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center">
+                  <svg class="w-6 h-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <span class="text-xl font-bold text-gray-900">Insights</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Get more out of your marketing budget</h3>
+              <p class="text-gray-600 leading-relaxed">
+                You can start advertising for as little as $50, with flexible budgets tailored to meet your marketing goals.
+              </p>
+            </div>
+            
+            <!-- News Card -->
+            <div class="bg-white border-4 border-gray-900 rounded-3xl p-8 hover:shadow-lg transition-shadow cursor-pointer">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center">
+                  <svg class="w-6 h-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                  </svg>
+                </div>
+                <span class="text-xl font-bold text-gray-900">News</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Adwave adds AI image-to-video capabilities</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Don't have content for your ad? No worries, we'll automatically scan your website for images and turn them into videos.
+              </p>
+            </div>
+            
+            <!-- Case Study Card -->
+            <div class="bg-white border-4 border-gray-900 rounded-3xl p-8 hover:shadow-lg transition-shadow cursor-pointer">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center">
+                  <svg class="w-6 h-6 text-lime-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                  </svg>
+                </div>
+                <span class="text-xl font-bold text-gray-900">Case Study</span>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">How Mountain Burger increased customers over 450%</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Running an ad with a solid call to action helped Mountain Burger bring in new fans.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      </div>
+       <!-- Footer -->
+    <footer class="bg-gradient-to-b from-white to-[#eaf6e2] pt-16 pb-0">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-12 pb-12">
+          <!-- Logo and Columns -->
+          <div class="flex-shrink-0 mb-8 md:mb-0">
+            <img src="images/adwave-dark-h.png" alt="Adwave Logo" class="h-12 w-auto mb-2">
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-12 w-full">
+            <!-- Product -->
+            <div>
+              <h4 class="font-bold text-lg mb-3 text-gray-900">Product</h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">What is Adwave?</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Industries</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Pricing</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Showcase</a></li>
+              </ul>
+            </div>
+            <!-- Docs & Help -->
+            <div>
+              <h4 class="font-bold text-lg mb-3 text-gray-900">Docs & Help</h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Resources</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">FAQs</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Get support</a></li>
+              </ul>
+            </div>
+            <!-- Company -->
+            <div>
+              <h4 class="font-bold text-lg mb-3 text-gray-900">Company</h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">About</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Careers</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">News</a></li>
+              </ul>
+            </div>
+            <!-- Contact -->
+            <div>
+              <h4 class="font-bold text-lg mb-3 text-gray-900">Contact</h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Get in touch</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Partners</a></li>
+                <li><a href="#" class="text-gray-800 text-xl hover:underline">Support</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Bar -->
+      <div class="bg-[#23233a] py-6 mt-0 w-full">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white text-base px-6">
+          <div class="flex flex-wrap items-center gap-6">
+            <span class="opacity-80">© 2025 Adwave Digital, Inc.</span>
+            <a href="#" class="hover:underline opacity-80">Terms</a>
+            <a href="#" class="hover:underline opacity-80">Privacy (Updated 05/2025)</a>
+            <a href="#" class="hover:underline opacity-80">Sitemap</a>
+            <a href="#" class="hover:underline opacity-80">Manage Cookies</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="#" class="inline-block"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#23233a"/><path d="M22.5 9h-13A.5.5 0 0 0 9 9.5v13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5zm-1.5 12h-2.25v-4.5c0-1.125-.375-1.5-1.125-1.5-.75 0-1.125.375-1.125 1.5V21H14.25v-7.5h2.25v1.125c.375-.75 1.125-1.125 2.25-1.125 1.5 0 2.25.75 2.25 2.625V21z" fill="#fff"/></svg></a>
+            <a href="#" class="inline-block"><svg class="w-7 h-7" fill="none" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#23233a"/><path d="M10 16c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6zm8.5-1.5h-5v-2h5v2zm-5 3h5v2h-5v-2z" fill="#fff"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </main>
+  </body>
+</html>
