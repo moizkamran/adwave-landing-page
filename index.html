@@ -369,6 +369,70 @@
       });
     </script>
 
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('testimonials.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('testimonials-container').innerHTML = html;
+
+        setTimeout(() => {
+          const image = document.getElementById("testimonial-image");
+          const title = document.getElementById("testimonial-title");
+          const quote = document.getElementById("testimonial-quote");
+          const author = document.getElementById("testimonial-author");
+          const position = document.getElementById("testimonial-position");
+
+          const testimonials = [
+            {
+              image: "images/test22.png",
+              title: ["Mountain", "Burger"],
+              quote: "We’ve been able to increase new customers significantly through Adwave’s innovative platform.",
+              author: "Steve McDichael",
+              position: "Head of Marketing"
+            },
+            {
+              image: "images/test-1.png",
+              title: ["Farrow Harley-", "Davidson"],
+              quote: "Our store traffic has exploded with new customers!",
+              author: "Sleve McDichael",
+              position: "Head of Marketing"
+            }
+          ];
+
+          let current = 0;
+
+          function updateContent(index) {
+            image.classList.add("opacity-0");
+
+            setTimeout(() => {
+              image.src = testimonials[index].image;
+              title.innerHTML = `
+                <span class="block">${testimonials[index].title[0]}</span>
+                <span class="block">${testimonials[index].title[1]}</span>
+              `;
+              quote.textContent = testimonials[index].quote;
+              author.textContent = testimonials[index].author;
+              position.textContent = testimonials[index].position;
+
+              image.classList.remove("opacity-0");
+            }, 300);
+          }
+
+          document.getElementById("next-testimonial").addEventListener("click", () => {
+            current = (current + 1) % testimonials.length;
+            updateContent(current);
+          });
+
+          document.getElementById("prev-testimonial").addEventListener("click", () => {
+            current = (current - 1 + testimonials.length) % testimonials.length;
+            updateContent(current);
+          });
+        }, 100);
+      });
+  });
+</script>
+
        <!-- Footer -->
     <footer class="bg-gradient-to-b from-white to-[#eaf6e2] pt-16 pb-0">
       <div class="max-w-7xl mx-auto px-6">
