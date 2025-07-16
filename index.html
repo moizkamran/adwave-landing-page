@@ -286,38 +286,60 @@
       }
     </style>
 
-    <!-- FAQs -->
-    <section class="px-6 py-16 bg-white">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-4 gap-12">
-          <!-- Left Column -->
-          <div class="lg:col-span-1">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-            <div class="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
-              <span class="text-lg font-medium">All FAQs</span>
-              <div class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Right Column -->
-          <div class="lg:col-span-3 space-y-4">
-            <div class="bg-white border-4 border-gray-900 rounded-full px-8 py-6 hover:shadow-md transition-shadow cursor-pointer">
-              <p class="text-lg font-semibold text-gray-900">How does Adwave work?</p>
-            </div>
-            <div class="bg-white border-4 border-gray-900 rounded-full px-8 py-6 hover:shadow-md transition-shadow cursor-pointer">
-              <p class="text-lg font-semibold text-gray-900">What does it cost to run an ad on TV?</p>
-            </div>
-            <div class="bg-white border-4 border-gray-900 rounded-full px-8 py-6 hover:shadow-md transition-shadow cursor-pointer">
-              <p class="text-lg font-semibold text-gray-900">Where do my ads run?</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- FAQ Component Include -->
+    <section class="bg-white">
+      <div id="faq-container"></div>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('faq.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('faq-container').innerHTML = html;
+          });
+      });
+    </script>
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('faq.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('faq-container').innerHTML = html;
+        initFAQToggles();
+      });
+  });
+
+  function initFAQToggles() {
+    const allAnswers = document.querySelectorAll('.faq-answer');
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = answer.style.height && answer.style.height !== '0px';
+
+        // Collapse all
+        allAnswers.forEach(ans => {
+          ans.style.height = '0px';
+        });
+
+        // Expand clicked one
+        if (!isOpen) {
+          answer.style.height = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Optional: Recalculate height on resize (in case of responsive text wrap)
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.faq-answer').forEach(ans => {
+        if (ans.style.height !== '0px') {
+          ans.style.height = ans.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+</script>
 
     <!-- Resources -->
     <section class="px-6 py-16 bg-white">
