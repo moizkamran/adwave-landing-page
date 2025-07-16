@@ -1,6 +1,8 @@
 <!-- How It Works Component -->
-<section class="px-6 bg-white relative pt-16">
-  <div class="max-w-7xl mx-auto">
+<section class="bg-white relative pt-16 overflow-hidden">
+  <!-- Bottom Gradient Background (only at the bottom, bleeding upward) -->
+  <div class="absolute left-0 right-0 bottom-0 h-40 md:h-56 lg:h-64 pointer-events-none z-0" style="background: linear-gradient(90deg, #D0DEBD 0%, #BFE0DB 100%); mask-image: linear-gradient(0deg, #fff 60%, transparent 100%); -webkit-mask-image: linear-gradient(0deg, #fff 60%, transparent 100%);"></div>
+  <div class="max-w-7xl mx-auto relative z-10">
     <!-- Header -->
     <div class="flex justify-between items-center">
       <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">How it works</h2>
