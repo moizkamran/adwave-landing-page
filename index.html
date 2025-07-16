@@ -72,7 +72,7 @@
               <input 
                 type="email" 
                 placeholder="Enter your website" 
-                class="w-full px-6 py-4 border-2 border-gray-300 rounded-full text-gray-600 focus:border-teal-400 focus:outline-none transition-colors"
+                class="w-full px-6 py-4 border-2 border-gray-300 rounded-full text-gray-600 focus:border-teal-400 focus:outline-none transition-colors placeholder:text-center"
               />
               <div class="absolute -left-2 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-lime-400 rotate-45"></div>
             </div>
@@ -182,68 +182,22 @@
   }
 </script>
 
-    <!-- How It Works -->
-    <section class="px-6 py-16 bg-white relative">
-      <div class="max-w-7xl mx-auto">
-        <!-- Header -->
-        <div class="flex justify-between items-center mb-12">
-          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">How it works</h2>
-          <div class="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
-            <span class="text-lg font-medium">Learn more</span>
-            <div class="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Steps -->
-        <div class="grid md:grid-cols-4 gap-8 mb-16">
-          <!-- Step 1 -->
-          <div class="text-center">
-            <div class="w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <img src="images/how/Group 48.png" alt="Enter website icon" class="w-full h-full">
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Enter your website</h3>
-          </div>
-          
-          <!-- Step 2 -->
-          <div class="text-center">
-            <div class="w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <img src="images/how/Group 49.png" alt="AI generates ad icon" class="w-full h-full">
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">AI generates your ad</h3>
-          </div>
-          
-          <!-- Step 3 -->
-          <div class="text-center">
-            <div class="w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <img src="images/how/Group 50.png" alt="Launch on TV icon" class="w-full h-full">
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Launch your ad on TV</h3>
-          </div>
-          
-          <!-- Step 4 -->
-          <div class="text-center">
-            <div class="w-20 h-20 flex items-center justify-center mx-auto mb-6">
-              <img src="images/how/Group 51.png" alt="Track performance icon" class="w-full h-full">
-            </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Track your ad performance</h3>
-          </div>
-        </div>
-        
-        <!-- Bottom Illustration -->
-        <div class="relative max-w-4xl mx-auto">
-          <div class="bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 rounded-t-3xl p-6 overflow-hidden relative">
-            <img src="images/how/BigBottom.png" alt="How it works illustration" class="w-full h-auto relative z-10">
-          </div>
-        </div>
-      </div>
+    <!-- How It Works Component Include -->
+    <section class="px-6 bg-white">
+      <div id="how-it-works-container"></div>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('how-it-works.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('how-it-works-container').innerHTML = html;
+          });
+      });
+    </script>
 
     <!-- Pricing -->
-    <section class="py-16">
+    <section>
       <div class="grid lg:grid-cols-2 gap-0">
         <!-- Left Side - Custom Purple -->
         <div style="background-color: #222239;" class="text-white p-12 py-24 flex flex-col justify-center">
