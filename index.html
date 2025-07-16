@@ -113,15 +113,74 @@
     <section class="px-6 py-16 bg-white">
       <div id="success-stories-container"></div>
     </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        fetch('success-stories.html')
-          .then(response => response.text())
-          .then(html => {
-            document.getElementById('success-stories-container').innerHTML = html;
-          });
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('success-stories.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('success-stories-container').innerHTML = html;
+        renderSuccessStories(); // call logic AFTER inject
       });
-    </script>
+  });
+</script>
+<script>
+  function renderSuccessStories() {
+    const cardContainer = document.getElementById('cardContainer');
+
+    const controlCard = `
+      <div class="bg-[#1A1A2E] text-white p-6 rounded-[2.5rem] w-[280px] flex-shrink-0 flex flex-col justify-between relative shadow-md">
+        <div class="absolute top-6 right-6 flex gap-2">
+          <button id="prevBtn" class="w-8 h-8 rounded-full bg-white text-gray-900 flex items-center justify-center text-base font-bold shadow hover:bg-gray-200 transition">&lt;</button>
+          <button id="nextBtn" class="w-8 h-8 rounded-full bg-white text-gray-900 flex items-center justify-center text-base font-bold shadow hover:bg-gray-200 transition">&gt;</button>
+        </div>
+        <div class="mt-10">
+          <h3 class="text-2xl font-extrabold mb-4 leading-tight">Farrow Harley-<br />Davidson</h3>
+          <p class="text-base leading-relaxed font-normal">
+            Farrow Harley-Davidson has increased revenues by 150% since running ads with Adwave
+          </p>
+        </div>
+      </div>
+    `;
+
+    let storyCards = [
+      {
+        html: `
+          <div class="relative rounded-3xl overflow-hidden flex items-center justify-center w-[500px] h-[300px] flex-shrink-0">
+            <img src="images/test-1.png" alt="Story 1" class="w-full h-full object-cover rounded-3xl border border-gray-300">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          </div>
+        `
+      },
+      {
+        html: `
+          <div class="relative rounded-3xl overflow-hidden flex items-center justify-center w-[500px] h-[300px] flex-shrink-0">
+            <img src="images/test-2.png" alt="Story 2" class="w-full h-full object-cover rounded-3xl border border-gray-300">
+          </div>
+        `
+      }
+    ];
+
+    function renderCards() {
+      cardContainer.innerHTML = controlCard + storyCards.map(card => card.html).join('');
+
+      document.getElementById('prevBtn').addEventListener('click', () => cycleCards('prev'));
+      document.getElementById('nextBtn').addEventListener('click', () => cycleCards('next'));
+    }
+
+    function cycleCards(direction) {
+      if (direction === 'next') {
+        const first = storyCards.shift();
+        storyCards.push(first);
+      } else {
+        const last = storyCards.pop();
+        storyCards.unshift(last);
+      }
+      renderCards();
+    }
+
+    renderCards();
+  }
+</script>
 
     <!-- How It Works -->
     <section class="px-6 py-16 bg-white relative">
