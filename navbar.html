@@ -1,0 +1,47 @@
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 border-b border-gray-200 bg-white backdrop-blur-sm">
+  <!-- Logo -->
+  <div class="flex items-center mr-8">
+    <a href="index.html">
+      <img src="images/icon-color.png" alt="Adwave Logo" class="h-8 w-auto">
+    </a>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="hidden md:flex flex-1 items-start justify-start space-x-8 text-sm font-medium text-gray-700">
+    <div class="relative flex items-center space-x-1 group">
+      <a href="#" class="group-hover:text-teal-500 group-hover:font-bold transition-colors">Product</a>
+      <svg class="w-4 h-4 text-gray-400 group-hover:text-teal-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+      <!-- Dropdown -->
+      <div class="absolute left-0 top-full w-48 bg-white border-2 border-black rounded-2xl shadow-lg z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200" style="box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+        <ul class="py-3 px-4 space-y-2 text-base text-gray-900">
+          <li><a href="#" class="hover:underline">What is Adwave?</a></li>
+          <li><a href="#" class="hover:underline">Showcase</a></li>
+          <li><a href="#" class="hover:underline">News</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="relative flex items-center space-x-1 group">
+      <a href="#" class="group-hover:text-teal-500 group-hover:font-bold transition-colors">Resources</a>
+      <svg class="w-4 h-4 text-gray-400 group-hover:text-teal-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+      <!-- Dropdown -->
+      <div class="absolute left-0 top-full w-48 bg-white border-2 border-black rounded-2xl shadow-lg z-50 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200" style="box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+        <ul class="py-3 px-4 space-y-2 text-base text-gray-900">
+          <li><a href="#" class="hover:underline">Resources</a></li>
+          <li><a href="#" class="hover:underline">FAQ</a></li>
+          <li><a href="#" class="hover:underline">Get support</a></li>
+        </ul>
+      </div>
+    </div>
+    <a href="pricing.html" class="hover:text-gray-900">Pricing</a>
+  </nav>
+  
+  <!-- Auth Buttons -->
+  <div class="flex items-center space-x-4">
+    <button class="font-bold text-gray-900 text-lg bg-transparent px-0 py-0 border-none focus:outline-none">Sign up</button>
+    <button class="font-bold text-gray-900 text-lg px-8 py-2 rounded-full border-2 border-black bg-gradient-to-r from-teal-400 to-yellow-300 focus:outline-none">Log in</button>
+  </div>
+</header>
