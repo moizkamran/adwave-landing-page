@@ -27,7 +27,7 @@
           <!-- Left Side -->
           <div>
             <h1 class="text-5xl font-extrabold text-[#23233a] mb-8" style="font-family: 'Roboto Condensed', Arial, sans-serif;">Get more out of your<br>budget with Adwave</h1>
-            <p class="text-2xl text-[#23233a] mb-8">Scale your reach at your own pace, starting at just $50 a month.</p>
+            <p class="text-lg text-gray-600 mb-8 font-sans font-normal">Scale your reach at your own pace, starting at just $50 a month.</p>
           </div>
           <!-- Right Side -->
           <div class="flex flex-col gap-5 w-full max-w-xl mx-auto">
@@ -101,36 +101,7 @@
             </ul>
           </div>
         </div>
-      </div>
-    <!-- Pricing Cal Component Include -->
-    <section class="bg-white mt-20 w-full">
-      <div id="pricing-cal-container" class="w-full"></div>
-    </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        fetch('pricing-cal2.html')
-          .then(response => response.text())
-          .then(html => {
-            document.getElementById('pricing-cal-container').innerHTML = html;
-          });
-      });
-    </script>
-         <!-- Pricing Cal Component Include -->
-    <section class="bg-white mt-20 w-full">
-      <div id="pricing-cal-container" class="w-full"></div>
-    </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        fetch('pricing-cal2.html')
-          .then(response => response.text())
-          .then(html => {
-            document.getElementById('pricing-cal-container').innerHTML = html;
-          });
-      });
-    </script>
-        <!-- Advantages Section -->
-      </div>
-      <section class="mt-16">
+         <section class="mt-16">
         <div class="max-w-7xl mx-auto px-6">
           <h2 class="text-4xl font-extrabold text-gray-900 mb-8">Advantages</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -221,6 +192,36 @@
           </div>
         </div>
       </section>
+      </div>
+    <!-- Pricing Cal Component Include -->
+    <section class="bg-white mt-20 w-full">
+      <div id="pricing-cal-container" class="w-full"></div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('pricing-cal2.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('pricing-cal-container').innerHTML = html;
+          });
+      });
+    </script>
+         <!-- Pricing Cal Component Include -->
+    <section class="bg-white mt-20 w-full">
+      <div id="pricing-cal-container" class="w-full"></div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('pricing-cal2.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('pricing-cal-container').innerHTML = html;
+          });
+      });
+    </script>
+        <!-- Advantages Section -->
+      </div>
+     
 
          <!-- FAQ Component Include -->
     <section class="bg-white">
@@ -251,82 +252,7 @@
     </script>
 
      <!-- Testimonials Component Include -->
-    <section class="bg-white">
-      <div id="testimonials-container"></div>
-    </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        fetch('testimonials.html')
-          .then(response => response.text())
-          .then(html => {
-            document.getElementById('testimonials-container').innerHTML = html;
-          });
-      });
-    </script>
 
-    <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    fetch('testimonials.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('testimonials-container').innerHTML = html;
-
-        setTimeout(() => {
-          const image = document.getElementById("testimonial-image");
-          const title = document.getElementById("testimonial-title");
-          const quote = document.getElementById("testimonial-quote");
-          const author = document.getElementById("testimonial-author");
-          const position = document.getElementById("testimonial-position");
-
-          const testimonials = [
-            {
-              image: "images/test22.png",
-              title: ["Mountain", "Burger"],
-              quote: "We’ve been able to increase new customers significantly through Adwave’s innovative platform.",
-              author: "Steve McDichael",
-              position: "Head of Marketing"
-            },
-            {
-              image: "images/test-1.png",
-              title: ["Farrow Harley-", "Davidson"],
-              quote: "Our store traffic has exploded with new customers!",
-              author: "Sleve McDichael",
-              position: "Head of Marketing"
-            }
-          ];
-
-          let current = 0;
-
-          function updateContent(index) {
-            image.classList.add("opacity-0");
-
-            setTimeout(() => {
-              image.src = testimonials[index].image;
-              title.innerHTML = `
-                <span class="block">${testimonials[index].title[0]}</span>
-                <span class="block">${testimonials[index].title[1]}</span>
-              `;
-              quote.textContent = testimonials[index].quote;
-              author.textContent = testimonials[index].author;
-              position.textContent = testimonials[index].position;
-
-              image.classList.remove("opacity-0");
-            }, 300);
-          }
-
-          document.getElementById("next-testimonial").addEventListener("click", () => {
-            current = (current + 1) % testimonials.length;
-            updateContent(current);
-          });
-
-          document.getElementById("prev-testimonial").addEventListener("click", () => {
-            current = (current - 1 + testimonials.length) % testimonials.length;
-            updateContent(current);
-          });
-        }, 100);
-      });
-  });
-</script>
 
     <!-- Footer Component Include -->
   </main>
