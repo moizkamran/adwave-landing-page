@@ -448,73 +448,17 @@
   });
 </script>
 
-       <!-- Footer -->
-    <footer class="bg-gradient-to-b from-white to-[#eaf6e2] pt-16 pb-0">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-12 pb-12">
-          <!-- Logo -->
-          <div class="flex-shrink-0 mb-8 md:mb-0">
-            <img src="images/adwave-dark-h.png" alt="Adwave Logo" class="h-12 w-auto mb-2">
-          </div>
-          <!-- Columns -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-12 w-full">
-            <!-- Product -->
-            <div>
-              <h4 class="font-bold text-lg mb-3 text-gray-900">Product</h4>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">What is Adwave?</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Industries</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Pricing</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Showcase</a></li>
-              </ul>
-            </div>
-            <!-- Docs & Help -->
-            <div>
-              <h4 class="font-bold text-lg mb-3 text-gray-900">Docs & Help</h4>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Resources</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">FAQs</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Get support</a></li>
-              </ul>
-            </div>
-            <!-- Company -->
-            <div>
-              <h4 class="font-bold text-lg mb-3 text-gray-900">Company</h4>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">About</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Careers</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">News</a></li>
-              </ul>
-            </div>
-            <!-- Contact -->
-            <div>
-              <h4 class="font-bold text-lg mb-3 text-gray-900">Contact</h4>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Get in touch</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Partners</a></li>
-                <li><a href="#" class="text-gray-800 text-xl hover:underline">Support</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Bottom Bar -->
-      <div class="bg-[#23233a] py-6 px-6 mt-0">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white text-base">
-          <div class="flex flex-wrap items-center gap-6">
-            <span class="opacity-80">© 2025 Adwave Digital, Inc.</span>
-            <a href="#" class="hover:underline opacity-80">Terms</a>
-            <a href="#" class="hover:underline opacity-80">Privacy (Updated 05/2025)</a>
-            <a href="#" class="hover:underline opacity-80">Sitemap</a>
-            <a href="#" class="hover:underline opacity-80">Manage Cookies</a>
-          </div>
-          <div class="flex items-center gap-4">
-            <a href="#" class="inline-block"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#23233a"/><path d="M22.5 9h-13A.5.5 0 0 0 9 9.5v13a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5zm-1.5 12h-2.25v-4.5c0-1.125-.375-1.5-1.125-1.5-.75 0-1.125.375-1.125 1.5V21H14.25v-7.5h2.25v1.125c.375-.75 1.125-1.125 2.25-1.125 1.5 0 2.25.75 2.25 2.625V21z" fill="#fff"/></svg></a>
-            <a href="#" class="inline-block"><svg class="w-7 h-7" fill="none" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#23233a"/><path d="M10 16c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6zm8.5-1.5h-5v-2h5v2zm-5 3h5v2h-5v-2z" fill="#fff"/></svg></a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Footer Component Include -->
+    <div id="footer-container"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('footer-container').innerHTML = html;
+          });
+      });
+    </script>
 
     <style>
       @keyframes scroll {
