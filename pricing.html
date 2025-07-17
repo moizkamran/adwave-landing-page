@@ -101,6 +101,19 @@
             </ul>
           </div>
         </div>
+         <!-- Pricing Cal Component Include -->
+    <section class="bg-white mt-20">
+      <div id="pricing-cal-container"></div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('pricing-cal.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('pricing-cal-container').innerHTML = html;
+          });
+      });
+    </script>
         <!-- Advantages Section -->
         <section class="mt-16">
           <h2 class="text-4xl font-extrabold text-gray-900 mb-8">Advantages</h2>

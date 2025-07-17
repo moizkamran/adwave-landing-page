@@ -200,73 +200,19 @@
       });
     </script>
 
-    <!-- Pricing -->
-    <section>
-      <div class="grid lg:grid-cols-2 gap-0">
-        <!-- Left Side - Custom Purple -->
-        <div style="background-color: #222239;" class="text-white p-12 py-24 flex flex-col justify-center">
-          <h2 class="text-4xl font-bold mb-6">Pricing</h2>
-          <p class="text-lg leading-relaxed mb-8 opacity-90">
-            You can start advertising for as little as $50, with flexible budgets tailored to meet your marketing goals. Use the slider below to see how much more you could be doing with your advertising budget.
-          </p>
-          
-          <!-- Budget Display -->
-          <div class="bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 mb-6 flex justify-between items-center">
-            <span class="text-2xl font-bold">$5,000</span>
-            <span class="text-sm opacity-80">USD</span>
-          </div>
-          
-          <!-- Slider -->
-          <div class="mb-6">
-            <input type="range" min="50" max="1000000" value="5000" class="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer slider"/>
-            <div class="flex justify-between text-sm opacity-80 mt-2">
-              <span>$50</span>
-              <span>$1,000,000</span>
-            </div>
-          </div>
-          
-          <!-- Disclaimer -->
-          <p class="text-sm opacity-70 italic">
-            All results shown are estimates. Actual results will vary by audience and location.
-          </p>
-        </div>
-        
-        <!-- Right Side - Green Gradient -->
-        <div class="bg-gradient-to-br from-green-400 to-teal-500 text-gray-800 p-12 py-24">
-          <div class="grid grid-cols-2 gap-8 h-full">
-            <!-- Top Row -->
-            <div>
-              <h3 class="text-lg font-bold mb-3 text-gray-700">Estimated viewers</h3>
-              <p class="text-4xl font-bold text-gray-800">5K-30K</p>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold mb-3 text-gray-700">Average daily viewers</h3>
-              <p class="text-4xl font-bold text-gray-800">150-400</p>
-            </div>
-            
-            <!-- Middle Row -->
-            <div>
-              <h3 class="text-lg font-bold mb-3 text-gray-700">Estimated cost per 1,000 impressions (CPM)</h3>
-              <p class="text-4xl font-bold text-gray-800">$15-$35</p>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold mb-3 text-gray-700">Estimated website traffic increase</h3>
-              <p class="text-4xl font-bold text-gray-800">100+ users</p>
-            </div>
-            
-            <!-- Bottom Row -->
-            <div>
-              <h3 class="text-lg font-bold mb-3 text-gray-700">Some other thing</h3>
-              <p class="text-4xl font-bold text-gray-800">475%</p>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold mb-3 text-gray-700">Another thing</h3>
-              <p class="text-4xl font-bold text-gray-800">100 things</p>
-            </div>
-          </div>
-        </div>
-      </div>
+   <!-- Pricing Cal Component Include -->
+    <section class="bg-white">
+      <div id="pricing-cal-container"></div>
     </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('pricing-cal.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('pricing-cal-container').innerHTML = html;
+          });
+      });
+    </script>
 
     <style>
       /* Custom slider styling */
