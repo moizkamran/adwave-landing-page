@@ -101,9 +101,23 @@
             </ul>
           </div>
         </div>
+      </div>
+    <!-- Pricing Cal Component Include -->
+    <section class="bg-white mt-20 w-full">
+      <div id="pricing-cal-container" class="w-full"></div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('pricing-cal2.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('pricing-cal-container').innerHTML = html;
+          });
+      });
+    </script>
          <!-- Pricing Cal Component Include -->
-    <section class="bg-white mt-20">
-      <div id="pricing-cal-container"></div>
+    <section class="bg-white mt-20 w-full">
+      <div id="pricing-cal-container" class="w-full"></div>
     </section>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -115,7 +129,9 @@
       });
     </script>
         <!-- Advantages Section -->
-        <section class="mt-16">
+      </div>
+      <section class="mt-16">
+        <div class="max-w-7xl mx-auto px-6">
           <h2 class="text-4xl font-extrabold text-gray-900 mb-8">Advantages</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Traditional TV vs Adwave -->
@@ -203,7 +219,8 @@
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
          <!-- FAQ Component Include -->
     <section class="bg-white">
@@ -312,16 +329,17 @@
 </script>
 
     <!-- Footer Component Include -->
-    <div id="footer-container"></div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        fetch('footer.html')
-          .then(response => response.text())
-          .then(html => {
-            document.getElementById('footer-container').innerHTML = html;
-          });
-      });
-    </script>
+  </main>
+  <div id="footer-container" class="w-full"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-container').innerHTML = html;
+        });
+    });
+  </script>
 
     <style>
       @keyframes scroll {
