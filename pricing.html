@@ -237,6 +237,47 @@
       });
     </script>
 
+       <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('faq.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('faq-container').innerHTML = html;
+        initFAQToggles();
+      });
+  });
+
+  function initFAQToggles() {
+    const allAnswers = document.querySelectorAll('.faq-answer');
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = answer.style.height && answer.style.height !== '0px';
+
+        // Collapse all
+        allAnswers.forEach(ans => {
+          ans.style.height = '0px';
+        });
+
+        // Expand clicked one
+        if (!isOpen) {
+          answer.style.height = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Optional: Recalculate height on resize (in case of responsive text wrap)
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.faq-answer').forEach(ans => {
+        if (ans.style.height !== '0px') {
+          ans.style.height = ans.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+</script>
+
      <!-- Resources Component Include -->
     <section class="bg-white">
       <div id="resources-container"></div>
