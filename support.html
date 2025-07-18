@@ -33,7 +33,7 @@
               <p class="text-xl text-gray-800 font-sans">For additional assistance, you can check out our FAQ as well as our other resources.</p>
             </div>
             <!-- Right Column -->
-            <form class="space-y-6">
+            <form id="contact-form" class="space-y-6">
               <div class="grid grid-cols-2 gap-6">
                 <div>
                   <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="firstName">First name</label>
@@ -67,9 +67,35 @@
                 <textarea id="message" name="message" rows="3" placeholder="Type your message…" class="w-full px-4 py-4 border border-gray-800 rounded-2xl text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors resize-none"></textarea>
               </div>
               <div class="flex justify-end">
-                <button class="font-bold text-gray-900 text-lg px-8 py-2 rounded-full border-2 border-black bg-gradient-to-r from-teal-400 to-yellow-300 focus:outline-none">Send</button>
+                <button type="submit" class="font-bold text-gray-900 text-lg px-8 py-2 rounded-full border-2 border-black bg-gradient-to-r from-teal-400 to-yellow-300 focus:outline-none">Send</button>
               </div>
             </form>
+
+            <!-- Confirmation Message (hidden by default) -->
+            <div id="confirmation-message" style="display:none;" class="flex flex-col items-start justify-start min-h-[600px]">
+              <h2 class="text-4xl font-extrabold text-gray-900 mb-8" style="font-family:inherit;">Message received!</h2>
+              <p class="text-xl text-gray-800 mb-4 font-sans">Thanks for getting in touch. We look forward speaking with you!</p>
+              <p class="text-xl text-gray-800 mb-8 font-sans">In the meantime, check out our <a href="faq.html" class="underline decoration-teal-400 hover:text-teal-600">FAQ</a> and other <a href="resources.html" class="underline decoration-teal-400 hover:text-teal-600">resources</a>.</p>
+              <a href="index.html" class="mt-2">
+                <button class="font-bold text-gray-900 text-xl px-8 py-2 rounded-full border-2 border-black bg-gradient-to-r from-teal-400 to-yellow-300 focus:outline-none shadow-md transition hover:scale-105" style="box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                  Return to home
+                </button>
+              </a>
+            </div>
+<script>
+// Confirmation message logic
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('contact-form');
+  var confirmation = document.getElementById('confirmation-message');
+  if (form && confirmation) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      confirmation.style.display = 'flex';
+    });
+  }
+});
+</script>
           </div>
         </section>
      
