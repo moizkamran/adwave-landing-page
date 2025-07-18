@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adwave Pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800" style="font-family: 'Roboto Condensed', Arial, sans-serif;">
+    <!-- Header Include -->
+    <div id="navbar-container"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('navbar.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('navbar-container').innerHTML = html;
+          });
+      });
+    </script>
+
+    <!-- Pricing Section -->
+    <main class="pt-32 bg-white min-h-screen">
+
+       <!-- Contact Form -->
+       <section class="px-6 py-16 bg-white">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <!-- Left Column -->
+            <div>
+              <h1 class="text-5xl font-extrabold text-gray-900 mb-6" style="font-family:inherit;">Contact us</h1>
+              <p class="text-xl text-gray-800 mb-6 font-sans">Whether you have questions about our platform, need assistance with your ad campaigns, or simply want to learn more, our team is ready to assist. Reach out to us through the form below, schedule a call, or request a demo—we’d love to hear from you!</p>
+              <p class="text-xl text-gray-800 font-sans">For additional assistance, you can check out our FAQ as well as our other resources.</p>
+            </div>
+            <!-- Right Column -->
+            <form class="space-y-6">
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="firstName">First name</label>
+                  <input id="firstName" name="firstName" type="text" placeholder="Enter first name" class="w-full px-4 py-2 border border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="lastName">Last name</label>
+                  <input id="lastName" name="lastName" type="text" placeholder="Enter last name" class="w-full px-4 py-2 border border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="position">Position</label>
+                  <input id="position" name="position" type="text" placeholder="Enter position" class="w-full px-4 py-2 border border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+                <div>
+                  <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="company">Company</label>
+                  <input id="company" name="company" type="text" placeholder="Enter company" class="w-full px-4 py-2 border border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="Enter email address" class="w-full px-4 py-2 border border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="website">Website URL</label>
+                <input id="website" name="website" type="text" placeholder="Enter website URL" class="w-full px-4 py-2 border border-gray-800 rounded-full text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors" />
+              </div>
+              <div>
+                <label class="block text-xl font-sans font-normal text-gray-900 mb-2" for="message">What do you want to talk about?</label>
+                <textarea id="message" name="message" rows="3" placeholder="Type your message…" class="w-full px-4 py-4 border border-gray-800 rounded-2xl text-lg text-gray-900 focus:border-lime-400 focus:outline-none transition-colors resize-none"></textarea>
+              </div>
+              <div class="flex justify-end">
+                <button class="font-bold text-gray-900 text-lg px-8 py-2 rounded-full border-2 border-black bg-gradient-to-r from-teal-400 to-yellow-300 focus:outline-none">Send</button>
+              </div>
+            </form>
+          </div>
+        </section>
+     
+
+         <!-- FAQ Component Include -->
+    <section class="bg-white">
+      <div id="faq-container"></div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('faq.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('faq-container').innerHTML = html;
+          });
+      });
+    </script>
+
+       <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('faq.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('faq-container').innerHTML = html;
+        initFAQToggles();
+      });
+  });
+
+  function initFAQToggles() {
+    const allAnswers = document.querySelectorAll('.faq-answer');
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = answer.style.height && answer.style.height !== '0px';
+
+        // Collapse all
+        allAnswers.forEach(ans => {
+          ans.style.height = '0px';
+        });
+
+        // Expand clicked one
+        if (!isOpen) {
+          answer.style.height = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    // Optional: Recalculate height on resize (in case of responsive text wrap)
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.faq-answer').forEach(ans => {
+        if (ans.style.height !== '0px') {
+          ans.style.height = ans.scrollHeight + 'px';
+        }
+      });
+    });
+  }
+</script>
+
+     <!-- Resources Component Include -->
+    <section class="bg-white">
+      <div id="resources-container"></div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        fetch('resources.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('resources-container').innerHTML = html;
+          });
+      });
+    </script>
+
+     <!-- Testimonials Component Include -->
+
+
+    <!-- Footer Component Include -->
+  </main>
+  <div id="footer-container" class="w-full"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('footer-container').innerHTML = html;
+        });
+    });
+  </script>
+
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      
+      .animate-scroll {
+        animation: scroll 20s linear infinite;
+      }
+      
+      .animate-scroll:hover {
+        animation-play-state: paused;
+      }
+    </style>
+    </main>
+  </body>
+</html>
